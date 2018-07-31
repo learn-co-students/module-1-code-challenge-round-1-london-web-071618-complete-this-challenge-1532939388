@@ -2,35 +2,19 @@ class Review
 
   ALL = []
 
-  attr_accessor :review
+  attr_accessor :content, :rating
   attr_reader :customer, :restaurant
 
-  def initialize(review, customer, restaurant)
-    @review = review
+  def initialize(content, customer, restaurant, rating)
+    @content = content
     @customer = customer
     @restaurant = restaurant
+    @rating = rating
     ALL << self
   end
 
   def self.all
     ALL
   end
-
-  def customer
-    self.all.each {|c| c.customer}
-  end
-
-  def restaurant
-    self.all.each {|r| r.restaurnt}
-  end
-
-  def rating
-
-  end
-
-  def content
-    self.all.each {|r| r.review}
-  end
-
 
 end
