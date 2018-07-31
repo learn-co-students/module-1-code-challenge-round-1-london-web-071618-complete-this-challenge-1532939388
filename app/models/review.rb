@@ -5,8 +5,7 @@ class Review
 
   @@all = []
 
-  def initialize(name, customer, restaurant, rating, content)
-    @name = name
+  def initialize(customer, restaurant, rating, content)
     @customer = customer
     @restaurant = restaurant
     @rating = rating
@@ -18,12 +17,6 @@ class Review
     @@all
   end
 
-  def customer
-    Review.all.map {|review| review.customer == self}
-  end
-
-  def rating
-  end
 
 
 
